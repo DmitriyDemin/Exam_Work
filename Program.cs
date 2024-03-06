@@ -25,22 +25,17 @@ class Work_string
         {
             set_strings[i] = Console.ReadLine()!;
         }
-        Console.Write($"Начальный массив: [\"{string.Join("\" ,\"", set_strings)}\"]");
+        Console.WriteLine($"Начальный массив: [\"{string.Join("\" ,\"", set_strings)}\"]");
         
-        // }
-        Console.WriteLine();
-        string[] set_new = new string[4];
+        string[] set_new = new string[size];
         for (int k= 0; k< set_strings.Length; k++)
         {
             string a = set_strings[k]; 
             if (a.Length <=3)
             set_new[k] = set_strings[k];
         }
-        Console.WriteLine(string.Join(" ", set_new));
-    // Console.WriteLine($"массив новых строк: [{string.Join(", ", set_new)}]");
-    
-    
+        set_new = set_new.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+        Console.WriteLine($"Искомый массив: [\"{string.Join("\" ,\"", set_new)}\"]");
+   
     }
-
-
 }
