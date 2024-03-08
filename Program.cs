@@ -26,7 +26,7 @@ class Work_string
             set_strings[i] = Console.ReadLine()!;
         }
         Console.WriteLine($"Начальный массив: [\"{string.Join("\" ,\"", set_strings)}\"]");
-        
+       
         string[] set_new = new string[size];
         for (int k= 0; k< set_strings.Length; k++)
         {
